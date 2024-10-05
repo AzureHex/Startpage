@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Startpage</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Embedded CSS -->
+    <style>
+        /* Import fonts */
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #1e2030;
+            color: #CAD3F5;
+            overflow: hidden;
+        }
+
+        /* Code rain effect */
+        .rain {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .drop {
+            position: absolute;
+            top: -20px;
+            white-space: nowrap;
+            color: #8AADF4;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        /* Keyframes for falling effect */
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .container {
+            display: none; /* Hide all pages by default */
+            height: calc(100vh - 60px); /* Adjust height to account for nav */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            z-index: 1; /* Ensure it appears above rain */
+        }
+
+        .active {
+            display: flex; /* Show only active content */
+        }
+
+        .right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .category {
+            flex: 1 1 200px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #8AADF4;
+            transition: color 0.3s ease;
+        }
+
+        ul li a:hover {
+            color: #7DC4E4;
+        }
+
+        /* Clock styles */
+        .clock {
+            position: absolute;
+            top: 20px;
+            right: 30px; /* Moved slightly to the right */
+            color: #CAD3F5;
+            font-size: 1.7rem;
+            z-index: 1;
+        }
+
+        /* Day and Date styles */
+        .date {
+            position: absolute;
+            top: 100px; /* Moved down to 100px */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #CAD3F5;
+            font-size: 1.8rem; /* Increased font size */
+            z-index: 1;
+        }
+
+        /* Navigation styles */
+        .navigation {
+            position: absolute;
+            bottom: 40px; /* Move navigation to the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            display: flex; /* Horizontal layout */
+            justify-content: center; /* Center the navigation */
+        }
+
+        .navigation button {
+            margin: 0 10px;
+            padding: 10px;
+            color: #FFF;
+            border: none;
+            background: none; /* Remove background */
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace; /* Match font */
+            font-size: 1.5rem; /* Font size */
+            transition: color 0.3s ease; /* Transition for color change */
+        }
+
+        /* Tab icon colors */
+        #homeBtn {
+            color: #FF5733; /* Pastel red */
+        }
+
+        #newsBtn {
+            color: #33FF57; /* Pastel green */
+        }
+
+        #entertainmentBtn {
+            color: #3357FF; /* Pastel blue */
+        }
+
+        #developerBtn {
+            color: #FFB300; /* Pastel yellow */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rain" id="rain"></div> <!-- Code rain container -->
+    
+    <div class="date" id="date">Day, Date</div> <!-- Day and Date display -->
+    <div class="clock" id="clock">00:00</div> <!-- Clock display -->
+
+    <!-- Main Page -->
+    <div id="mainPage" class="container active">
+        <div class="right">
+            <!-- Categories and Links -->
+            <div class="categories">
+                <div class="category">
+                    <h3 style="color: #FF5733;"><i class="fab fa-share-alt"></i> Socials</>
+                    <ul>
+                        <li><a href="https://twitter.com"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://reddit.com"><i class="fab fa-reddit"></i> Reddit</a></li>
+                        <li><a href="https://discord.com"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="https://mail.google.com"><i class="fas fa-envelope"></i> Gmail</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3 style="color: #33FF57;"><i class="fab fa-reddit"></i> Reddit</>
+                    <ul>
+                        <li><a href="https://reddit.com/r/unixporn"><i class="fab fa-reddit"></i> UnixPorn</a></li>
+                        <li><a href="https://reddit.com/r/startpages"><i class="fab fa-reddit"></i> Startpages</a></li>
+                        <li><a href="https://reddit.com/r/nba"><i class="fab fa-basketball-ball"></i> NBA</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3 style="color: #3357FF;"><i class="fas fa-tools"></i> Tools</>
+                    <ul>
+                        <li><a href="https://github.com"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://figma.com"><i class="fab fa-figma"></i> Figma</a></li>
+                        <li><a href="https://chat.openai.com"><i class="fab fa-openai"></i> ChatGPT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Page -->
+    <div id="newsPage" class="container">
+        <div class="right">
+            <h2 style="color: #FF5733;"
+            <div class="categories">
+                <div class="category">
+                    <h3 style="color: #FF5733;"><i class="fas fa-newspaper"></i> News</h3>
+                    <ul>
+                        <li><a href="https://news.ycombinator.com"><i class="fas fa-globe"></i> Hacker News</a></li>
+                        <li><a href="https://www.bbc.com/news"><i class="fas fa-globe"></i> BBC News</a></li>
+                        <li><a href="https://www.theverge.com"><i class="fas fa-globe"></i> The Verge</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3 style="color: #33FF57;"><i class="fas fa-camera"></i> Photography</h3>
+                    <ul>
+                        <li><a href="https://unsplash.com"><i class="fab fa-unsplash"></i> Unsplash</a></li>
+                        <li><a href="https://www.pexels.com"><i class="fab fa-pexels"></i> Pexels</a></li>
+                        <li><a href="https://www.pixabay.com"><i class="fab fa-pixabay"></i> Pixabay</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Entertainment Page -->
+    <div id="entertainmentPage" class="container">
+        <div class="right">
+            <h2 style="color: #FF5733;"
+            <div class="categories">
+                <div class="category">
+                    <h3 style="color: #FF5733;"><i class="fas fa-film"></i> Movies</h3>
+                    <ul>
+                        <li><a href="https://www.imdb.com"><i class="fas fa-star"></i> IMDb</a></li>
+                        <li><a href="https://www.rottentomatoes.com"><i class="fas fa-star"></i> Rotten Tomatoes</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3 style="color: #33FF57;"><i class="fas fa-music"></i> Music</h3>
+                    <ul>
+                        <li><a href="https://www.spotify.com"><i class="fab fa-spotify"></i> Spotify</a></li>
+                        <li><a href="https://www.last.fm"><i class="fab fa-lastfm"></i> Last.fm</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Developer Page -->
+    <div id="developerPage" class="container">
+        <div class="right">
+            <h2 style="color: #FF5733;"
+            <div class="categories">
+                <div class="category">
+                    <h3 style="color: #FF5733;"><i class="fas fa-code"></i> Code</h3>
+                    <ul>
+                        <li><a href="https://stackoverflow.com"><i class="fab fa-stack-overflow"></i> Stack Overflow</a></li>
+                        <li><a href="https://www.freecodecamp.org"><i class="fab fa-free-code-camp"></i> FreeCodeCamp</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3 style="color: #33FF57;"><i class="fas fa-book"></i> Learning</h3>
+                    <ul>
+                        <li><a href="https://www.codecademy.com"><i class="fas fa-laptop-code"></i> Codecademy</a></li>
+                        <li><a href="https://www.khanacademy.org"><i class="fas fa-laptop-code"></i> Khan Academy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navigation" aria-label="Main navigation">
+        <button id="homeBtn" aria-label="Home" onclick="switchPage('mainPage')">
+            <i class="fas fa-home"></i>
+        </button>
+        <button id="newsBtn" aria-label="Latest News" onclick="switchPage('newsPage')">
+            <i class="fas fa-newspaper"></i>
+        </button>
+        <button id="entertainmentBtn" aria-label="Entertainment" onclick="switchPage('entertainmentPage')">
+            <i class="fas fa-film"></i>
+        </button>
+        <button id="developerBtn" aria-label="Developer Tools" onclick="switchPage('developerPage')">
+            <i class="fas fa-code"></i>
+        </button>
+    </nav>
+
+    <!-- JavaScript -->
+    <script>
+        // Update the clock every second
+        setInterval(() => {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}`;
+        }, 1000);
+
+        // Update the day and date every minute
+        setInterval(() => {
+            const now = new Date();
+            const options = { weekday: 'long', month: 'long', day: 'numeric' }; // Removed year
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+        }, 60000);
+        
+        // Initial update for date display
+        (function updateInitialDate() {
+            const now = new Date();
+            const options = { weekday: 'long', month: 'long', day: 'numeric' }; // Removed year
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+        })();
+
+        // Code rain effect
+        function createRain() {
+            const rainContainer = document.getElementById('rain');
+            const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'; // Character set for rain effect
+            for (let i = 0; i < 100; i++) {
+                const drop = document.createElement('div');
+                drop.className = 'drop';
+                drop.style.left = Math.random() * 100 + 'vw';
+                drop.style.animationDuration = (Math.random() * 5 + 4) + 's'; // Slower speed adjustment
+                drop.style.opacity = Math.random();
+                drop.textContent = characters.charAt(Math.floor(Math.random() * characters.length)); // Random character
+                rainContainer.appendChild(drop);
+            }
+        }
+
+        // Switch pages based on button clicked
+        function switchPage(pageId) {
+            const pages = document.querySelectorAll('.container');
+            pages.forEach(page => {
+                page.classList.remove('active'); // Hide all pages
+            });
+            document.getElementById(pageId).classList.add('active'); // Show selected page
+        }
+
+        // Start rain effect
+        createRain();
+    </script>
+</body>
+
+</html>
