@@ -5,7 +5,7 @@ const default_config = {
   overrideStorage: true,
   localIcons: true,
   temperature: {
-    location: "Alicante",
+    location: "Agartala",
     scale: "C",
   },
   clock: {
