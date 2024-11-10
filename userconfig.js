@@ -12,7 +12,7 @@ const default_config = {
     iconColor: palette.maroon,
   },
   disabled: [],
-  fastlink: "https://linktr.ee/matt_ftw",
+  fastlink: "https://azurehex.github.io/Startpage/",
   openLastVisitedTab: false,
   tabs: [
     {
