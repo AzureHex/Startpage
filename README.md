@@ -5,6 +5,7 @@
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
+<!--
 <p align="center">
   <a href="https://github.com/pivoshenko/catppuccin-startpage/stargazers">
     <img src="https://img.shields.io/github/stars/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=starship&color=a6e3a1&logoColor=D9E0EE&labelColor=302D41">
@@ -16,11 +17,13 @@
     <img src="https://img.shields.io/github/contributors/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=github&color=f38ba8&logoColor=D9E0EE&labelColor=302D41">
   </a>
 </p>
+-->
 
 <p align="center">
   <img src="assets/preview.png"/>
 </p>
 
+<!--
 ## 🪴 Overview
 
 Aesthetic and clean startpage in [**Catppuccin**](https://catppuccin.com/palette) style, hosted on GitHub Pages.
@@ -83,3 +86,4 @@ You can use different add-ons/extensions for it
 | cbg-10                                           | cbg-11                                           | cbg-12                                           | cbg-13                                           |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
 | <img src="src/img/banners/cbg-10.gif" width=175> | <img src="src/img/banners/cbg-11.gif" width=175> | <img src="src/img/banners/cbg-12.gif" width=175> | <img src="src/img/banners/cbg-13.gif" width=175> |
+-->
