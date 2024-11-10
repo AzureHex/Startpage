@@ -28,24 +28,29 @@ const default_config = {
               url: "https://mastodon.social",
               icon: "brand-mastodon",
               icon_color: palette.green,
+              target: "_blank",
             },
             {
               name: "reddit",
               url: "https://www.reddit.com/",
               icon: "brand-reddit",
               icon_color: palette.peach,
+              target: "_blank",
+
             },
             {
               name: "youtube",
               url: "https://www.youtube.com/",
               icon: "brand-youtube",
               icon_color: palette.red,
+              target: "_blank",
             },
             {
               name: "twitch",
               url: "https://www.twitch.tv/",
               icon: "brand-twitch",
               icon_color: palette.blue,
+              target: "_blank",
             },
             {
               name: "hacker-news",
