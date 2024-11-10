@@ -3,6 +3,7 @@ const palette = macchiato;
 
 const default_config = {
   overrideStorage: true,
+  localIcons: true,
   temperature: {
     location: "Alicante",
     scale: "C",
