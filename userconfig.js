@@ -9,12 +9,12 @@ const default_config = {
     scale: "C",
   },
   clock: {
-    format: "h:i p",
+    format: "h:i",
     iconColor: palette.maroon,
   },
   disabled: [],
   fastlink: "https://azurehex.github.io/Startpage/",
-  openLastVisitedTab: false,
+  openLastVisitedTab: true,
   tabs: [
     {
       name: "personal",
