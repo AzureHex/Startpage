@@ -48,6 +48,7 @@ const default_config = {
             },
             {
               name: "calendar",
+              url: "https://calendar.proton.me/",
               icon: "calendar-filled",
               icon_color: palette.peach,
             },
