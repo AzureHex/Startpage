@@ -24,12 +24,6 @@ const default_config = {
           name: "media/rrss",
           links: [
             {
-              name: "mastodon",
-              url: "https://mastodon.social",
-              icon: "brand-mastodon",
-              icon_color: palette.green,
-            },
-            {
               name: "reddit",
               url: "https://www.reddit.com/",
               icon: "brand-reddit",
@@ -39,24 +33,7 @@ const default_config = {
               name: "youtube",
               url: "https://www.youtube.com/",
               icon: "brand-youtube",
-              icon_color: palette.red,            },
-            {
-              name: "twitch",
-              url: "https://www.twitch.tv/",
-              icon: "brand-twitch",
-              icon_color: palette.blue,
-            },
-            {
-              name: "hacker-news",
-              url: "https://news.ycombinator.com/ask",
-              icon: "news",
-              icon_color: palette.mauve,
-            },
-            {
-              name: "lemmy",
-              url: "https://lemmy.ml/",
-              icon: "users",
-              icon_color: palette.sky,
+              icon_color: palette.red,
             },
           ],
         },
@@ -93,33 +70,10 @@ const default_config = {
           name: "school",
           links: [
             {
-              name: "aules",
-              url: "https://aules.edu.gva.es/semipresencial/my/index.php?lang=es",
-              icon: "school",
-              icon_color: palette.green,
-            },
-            {
               name: "outlook",
               url: "https://outlook.office.com/mail/",
               icon: "inbox",
               icon_color: palette.peach,
-            },
-            {
-              name: "aws",
-              url: "https://awsacademy.instructure.com/",
-              icon: "brand-aws",
-              icon_color: palette.red,
-            },
-          ],
-        },
-        {
-          name: "job",
-          links: [
-            {
-              name: "linkedin",
-              url: "https://www.linkedin.com/",
-              icon: "brand-linkedin",
-              icon_color: palette.green,
             },
           ],
         },
@@ -127,14 +81,8 @@ const default_config = {
           name: "shopping",
           links: [
             {
-              name: "pccomponentes",
-              url: "https://www.pccomponentes.com/",
-              icon: "device-desktop",
-              icon_color: palette.green,
-            },
-            {
               name: "amazon",
-              url: "https://www.amazon.es/",
+              url: "https://www.amazon.in/",
               icon: "brand-amazon",
               icon_color: palette.peach,
             },
@@ -143,18 +91,6 @@ const default_config = {
               url: "https://camelcamelcamel.com/",
               icon: "chart-area",
               icon_color: palette.red,
-            },
-            {
-              name: "chollometro",
-              url: "https://www.chollometro.com/",
-              icon: "basket",
-              icon_color: palette.blue,
-            },
-            {
-              name: "kimovil",
-              url: "https://www.kimovil.com/en/",
-              icon: "cell-signal-5",
-              icon_color: palette.mauve,
             },
           ],
         },
@@ -452,12 +388,6 @@ const default_config = {
               icon: "brand-minecraft",
               icon_color: palette.peach,
             },
-            {
-              name: "moddb",
-              url: "https://www.moddb.com",
-              icon: "file-type-sql",
-              icon_color: palette.red,
-            },
           ],
         },
         {
@@ -499,57 +429,10 @@ const default_config = {
               icon_color: palette.green,
             },
             {
-              name: "soundcloud",
-              url: "https://www.soundcloud.com",
-              icon: "brand-soundcloud",
-              icon_color: palette.peach,
-            },
-            {
               name: "youtube-music",
               url: "https://music.youtube.com/",
               icon: "brand-youtube",
               icon_color: palette.red,
-            },
-            {
-              name: "tidal",
-              url: "https://listen.tidal.com/",
-              icon: "brand-tidal",
-              icon_color: palette.blue,
-            },
-            {
-              name: "genius",
-              url: "https://genius.com/",
-              icon: "abc",
-              icon_color: palette.mauve,
-            },
-          ],
-        },
-        {
-          name: "rating/tracking",
-          links: [
-            {
-              name: "AOTY",
-              url: "https://www.albumoftheyear.org/",
-              icon: "calendar-time",
-              icon_color: palette.green,
-            },
-            {
-              name: "rateyourmusic",
-              url: "https://rateyourmusic.com/",
-              icon: "stars-off",
-              icon_color: palette.peach,
-            },
-            {
-              name: "lastfm",
-              url: "https://www.last.fm",
-              icon: "brand-lastfm",
-              icon_color: palette.red,
-            },
-            {
-              name: "listenbrainz",
-              url: "https://listenbrainz.org",
-              icon: "ear",
-              icon_color: palette.blue,
             },
           ],
         },
@@ -588,41 +471,6 @@ const default_config = {
             },
           ],
         },
-        {
-          name: "resources",
-          links: [
-            {
-              name: "freesound",
-              url: "https://freesound.org/",
-              icon: "volume",
-              icon_color: palette.green,
-            },
-            {
-              name: "pluginboutique",
-              url: "https://www.pluginboutique.com/",
-              icon: "building-store",
-              icon_color: palette.peach,
-            },
-            {
-              name: "pianobook",
-              url: "https://www.pianobook.co.uk",
-              icon: "piano",
-              icon_color: palette.red,
-            },
-            {
-              name: "musescore",
-              url: "https://musescore.com/",
-              icon: "numbers",
-              icon_color: palette.blue,
-            },
-            {
-              name: "songsterr",
-              url: "https://www.songsterr.com/",
-              icon: "vinyl",
-              icon_color: palette.mauve,
-            },
-          ],
-        },
       ],
     },
     {
@@ -639,22 +487,10 @@ const default_config = {
               icon_color: palette.green,
             },
             {
-              name: "pixiv",
-              url: "https://www.pixiv.net/en/",
-              icon: "artboard",
-              icon_color: palette.peach,
-            },
-            {
               name: "pinterest",
               url: "https://www.pinterest.com/",
               icon: "brand-pinterest",
               icon_color: palette.red,
-            },
-            {
-              name: "artstation",
-              url: "https://www.artstation.com",
-              icon: "pencil-heart",
-              icon_color: palette.blue,
             },
           ],
         },
@@ -691,22 +527,10 @@ const default_config = {
           name: "tools",
           links: [
             {
-              name: "convert-image-palette",
-              url: "https://farbenfroh.io/",
-              icon: "adjustments",
-              icon_color: palette.green,
-            },
-            {
               name: "excalidraw",
               url: "https://excalidraw.com/",
               icon: "pencil",
               icon_color: palette.peach,
-            },
-            {
-              name: "squoosh",
-              url: "https://squoosh.app/",
-              icon: "aspect-ratio",
-              icon_color: palette.red,
             },
             {
               name: "palette-generator",
@@ -732,12 +556,6 @@ const default_config = {
           name: "general",
           links: [
             {
-              name: "alternative-to",
-              url: "https://alternativeto.net/",
-              icon: "box-multiple",
-              icon_color: palette.green,
-            },
-            {
               name: "deepl",
               url: "https://www.deepl.com",
               icon: "language",
@@ -754,12 +572,6 @@ const default_config = {
               url: "https://dub.co/",
               icon: "external-link",
               icon_color: palette.blue,
-            },
-            {
-              name: "speed-test",
-              url: "https://librespeed.org/",
-              icon: "brand-speedtest",
-              icon_color: palette.mauve,
             },
             {
               name: ".to",
@@ -802,24 +614,11 @@ const default_config = {
               icon: "skull",
               icon_color: palette.peach,
             },
-
-            {
-              name: "mobilism",
-              url: "https://forum.mobilism.me/",
-              icon: "device-mobile",
-              icon_color: palette.red,
-            },
           ],
         },
         {
           name: "privacy",
           links: [
-            {
-              name: "adblock-test",
-              url: "https://d3ward.github.io/toolz/adblock.html",
-              icon: "lock-access",
-              icon_color: palette.green,
-            },
             {
               name: "privacy-guides",
               url: "https://www.privacyguides.org/en/",
@@ -850,12 +649,6 @@ const default_config = {
           name: "security",
           links: [
             {
-              name: "cybersecurity-guide",
-              url: "https://s0cm0nkey.gitbook.io/s0cm0nkeys-security-reference-guide",
-              icon: "fingerprint",
-              icon_color: palette.green,
-            },
-            {
               name: "virus-total",
               url: "https://www.virustotal.com",
               icon: "virus-search",
@@ -866,18 +659,6 @@ const default_config = {
               url: "https://www.hackthebox.com/",
               icon: "biohazard",
               icon_color: palette.red,
-            },
-            {
-              name: "triage",
-              url: "https://tria.ge/",
-              icon: "dna-2",
-              icon_color: palette.blue,
-            },
-            {
-              name: "cyberchef",
-              url: "https://gchq.github.io/CyberChef/",
-              icon: "chef-hat",
-              icon_color: palette.mauve,
             },
             {
               name: "web-check",
@@ -901,12 +682,6 @@ const default_config = {
               url: "https://huggingface.co/",
               icon: "robot",
               icon_color: palette.peach,
-            },
-            {
-              name: "open-webui",
-              url: "http://127.0.0.1:8080/",
-              icon: "message-chatbot",
-              icon_color: palette.red,
             },
           ],
         },
