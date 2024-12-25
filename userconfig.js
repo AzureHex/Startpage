@@ -48,7 +48,6 @@ const default_config = {
             },
             {
               name: "calendar",
-              url: "https://calendar.proton.me",
               icon: "calendar-filled",
               icon_color: palette.peach,
             },
@@ -63,17 +62,6 @@ const default_config = {
               url: "https://drive.proton.me",
               icon: "cloud",
               icon_color: palette.blue,
-            },
-          ],
-        },
-        {
-          name: "school",
-          links: [
-            {
-              name: "outlook",
-              url: "https://outlook.office.com/mail/",
-              icon: "inbox",
-              icon_color: palette.peach,
             },
           ],
         },
@@ -301,12 +289,6 @@ const default_config = {
         {
           name: "deals",
           links: [
-            {
-              name: "GG Deals",
-              url: "https://gg.deals/",
-              icon: "cash",
-              icon_color: palette.green,
-            },
             {
               name: "r/gameDeals",
               url: "https://www.reddit.com/r/GameDeals/",
@@ -632,8 +614,8 @@ const default_config = {
               icon_color: palette.red,
             },
             {
-              name: "guerrilla-mail",
-              url: "https://www.guerrillamail.com",
+              name: "maildrop",
+              url: "https://maildrop.cc/",
               icon: "trash",
               icon_color: palette.blue,
             },
