@@ -205,16 +205,10 @@ const default_config = {
               icon_color: palette.peach,
             },
             {
-              name: "wakatime",
-              url: "https://wakatime.com",
-              icon: "24-hours",
-              icon_color: palette.red,
-            },
-            {
               name: "dotfyle",
               url: "https://dotfyle.com/",
               icon: "puzzle",
-              icon_color: palette.blue,
+              icon_color: palette.red,
             },
           ],
         },
