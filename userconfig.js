@@ -13,7 +13,7 @@ const default_config = {
     iconColor: palette.maroon,
   },
   disabled: [],
-  fastlink: "https://github.com/AzureHex",
+  fastlink: "https://github.com/AzureHound",
   openLastVisitedTab: true,
   tabs: [
     {
